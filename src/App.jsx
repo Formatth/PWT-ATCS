@@ -5,8 +5,13 @@ import 'leaflet/dist/leaflet.css';
 
 const HLS_HOST = 'https://cctv.dev.banyumaskab.go.id';
 
-const stream = (slug, kind = 'simpang') =>
-  `${HLS_HOST}/cctv_${kind}_${slug}/video1_stream.m3u8`;
+const stream = (slug, kind = 'simpang') => {
+  const endpointSlug = slug
+    .replace(/^ruas-/, '')
+    .replace(/-/g, '_');
+
+  return `${HLS_HOST}/cctv_${kind}_${endpointSlug}/video1_stream.m3u8`;
+};
 
 // Coordinates are map points for the intersection/road location. Multi-angle
 // cameras at the same junction intentionally share one map marker.
