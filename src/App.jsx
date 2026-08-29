@@ -5,12 +5,16 @@ import 'leaflet/dist/leaflet.css';
 
 const HLS_HOST = 'https://cctv.dev.banyumaskab.go.id';
 
+// ATCS exposes an index/master playlist for each camera. The index playlist
+// then resolves the live video1_stream.m3u8 playlist and its current LL-HLS
+// segments. Starting from index.m3u8 is important; video1_stream.m3u8 is not
+// a stable standalone entry point for every camera.
 const stream = (slug, kind = 'simpang') => {
   const endpointSlug = slug
     .replace(/^ruas-/, '')
     .replace(/-/g, '_');
 
-  return `${HLS_HOST}/cctv_${kind}_${endpointSlug}/video1_stream.m3u8`;
+  return `${HLS_HOST}/cctv_${kind}_${endpointSlug}/index.m3u8`;
 };
 
 // Coordinates are map points for the intersection/road location. Multi-angle
