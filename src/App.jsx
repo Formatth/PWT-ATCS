@@ -34,7 +34,7 @@ const CAMERAS = [
   ['karang-bawang-timur', 'Simpang Karang Bawang Timur', 'Purwokerto Selatan', 'simpang', -7.426167, 109.251800],
   ['karang-bawang-barat', 'Simpang Karang Bawang Barat', 'Purwokerto Selatan', 'simpang', -7.426167, 109.250600],
   ['pancurawis', 'Simpang Pancurawis', 'Purwokerto Selatan', 'simpang', -7.438800, 109.245000],
-  ['tugu-adipura', 'Tugu Adipura', 'Purwokerto Selatan', 'simpang', -7.437290, 109.262327],
+  ['tugu-adipura', 'Tugu Adipura', 'Purwokerto Selatan', 'ruas', -7.437290, 109.262327],
   ['ruas-kalibogor', 'Ruas Kalibogor', 'Purwokerto Barat', 'ruas', -7.422313, 109.212762],
   ['ruas-tanjung', 'Ruas Tanjung', 'Purwokerto Selatan', 'ruas', -7.425200, 109.235000],
   ['ruas-patriot', 'Ruas Patriot', 'Purwokerto Selatan', 'ruas', -7.432000, 109.240500],
